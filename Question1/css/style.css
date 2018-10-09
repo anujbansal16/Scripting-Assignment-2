@@ -1,0 +1,16 @@
+button{
+	background-color: #4CAF50;
+	color: #fff;
+}
+.nightmode{
+	background-color: rgba(0, 0, 20, .95) !important;
+	color: #fff !important;
+}
+.nightmodeblk{
+	background-color: #0a0a0a !important;
+	color: #fff !important;
+}
+.turnedOff {
+    color: #ffff00 !important;
+    background-image: url(../imgs/lights-off.png) !important;
+}

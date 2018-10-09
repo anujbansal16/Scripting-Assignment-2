@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</head>
+<body >
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <!-- <a href="#">About</a> -->
+  	<h2 class="text-center">Wiki</h2>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="form-group">
+	  			<input type="text" class="form-control" id="characterT">
+			</div>
+			<div>
+				<button class="button1" id="sC">Search Character</button>	
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="form-group">
+	  			<input type="text" class="form-control" id="houseText">
+			</div>
+			<div>
+				<button class="button1" id="sH">Search House</button>	
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div>
+				<button class="button2" id="rC">Random Character</button>	
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div>
+				<button class="button2" id="rH">Random House</button>	
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div>
+				<button class="button2" id="rHC">Random House Character</button>	
+			</div>
+		</div>
+	</div>
+  
+</div>
+
+<div id="main">
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;	MENU</span>
+<!-- Button trigger modal -->
+<button style="display: none;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="dial">
+  Launch demo modal
+</button>
+<!-- Modal -->
+<div style="color: #000" class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <h3 class="modal-title" id="exampleModalLongTitle">Modal ada das dadas dads  dads title</h3> -->
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" style="font-size: 25px">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<h4 class="modal-title text-center" id="exampleModalLongTitle"></h4>
+        ...
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+  
+  <div id="api-content" class="text-center">
+  	<h1 style="color: #000"><b>Welcome to the wiki of Ice And Fire</h1>
+  	<h2><b>All the data from the universe of Ice And Fire you've ever wanted!</h2>
+  	<h2><b>(Click on the Menu)</h2>
+  </div>
+  <div class="row" id="buttonGrp" style="display: none">
+		<div class="col-sm-2 col-sm-offset-4">
+			<div>
+				<button class="button1" id="prev">Prev&lt;</button>	
+			</div>
+		</div>
+		<div class="col-sm-2">
+			<div>
+				<button class="button2" id="nxt">Next&gt;</button>	
+			</div>
+		</div>
+	</div>
+  
+  
+</div>
+<div id="overlay" style="background-color: rgba(0,0,0,0.4);z-index: 1000;width: 100%;height: 100vh;position: absolute;top: 0px;display: none"></div>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.getElementById("overlay").style.marginLeft = "250px";
+    document.getElementById("overlay").style.display = "block";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.getElementById("overlay").style.marginLeft = "0";
+    document.getElementById("overlay").style.display = "none";
+}
+</script>
+
+</body>
+</html> 
+

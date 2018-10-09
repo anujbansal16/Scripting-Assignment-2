@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Try it now</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body class="content-box" style="background-color: #f1f1f1" >
+<div class="container-fluid" style="margin-top: 2%">
+	<div class="page-header" style="margin-top: 0px">
+		<h1>Online Editor for Html/Css/Javascript</h1>
+	</div>
+	<div class="row">
+			<div class="col-sm-12">
+				<button style="margin-bottom:10px;" class="btn btn-skin"  onclick="update();"><span class="glyphicon glyphicon-cog"> </span> Execute</button>
+				<button style="margin-bottom:10px;" class="btn btn-skin" onclick="clearI();"><span class="glyphicon glyphicon-erase"> </span> Clear Input</button>
+				<button style="margin-bottom:10px;" class="btn btn-skin" onclick="clearO();"><span class="glyphicon glyphicon-erase"> </span> Clear Results</button>
+				<button style="margin-bottom:10px;color: #67b0d1;background: url(imgs/bulb.png) no-repeat;background-position: left;padding-top: 10px;padding-left: 20px" class="btn btn-skin night-mode">Turn off the lights</button>
+			</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col sm-12">
+			<div class="form-group">
+				<textarea class="form-control" rows="16" id="inputPanel" placeholder="//Your code goes here..." ></textarea>
+			</div>
+		</div>
+		<div class="col-md-6 col sm-12">
+			<div class="form-group">
+				<div class="embed-responsive embed-responsive-16by9">
+		    		<iframe style="border: 2px solid" id="outframe" class="embed-responsive-item"></iframe>	
+	  			</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+<script type="text/javascript">
+	//tab functinality in text area
+    var textareas = document.getElementsByTagName('textarea');
+	var count = textareas.length;
+	for(var i=0;i<count;i++){
+	    textareas[i].onkeydown = function(e){
+	        if(e.keyCode==9 || e.which==9){
+	            e.preventDefault();
+	            var s = this.selectionStart;
+	            this.value = this.value.substring(0,this.selectionStart) + "\t" + this.value.substring(this.selectionEnd);
+	            this.selectionEnd = s+1; 
+	        }
+	    }
+	}
+	
+</script>
+
+</body>
+</html>

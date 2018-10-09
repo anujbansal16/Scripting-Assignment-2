@@ -1,0 +1,106 @@
+body{
+	background-color: brown;
+}
+
+.container{
+	margin-top: 5%;
+	width: 40vw;
+	height: 40vw;
+	border-radius: 50%;  
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+	background-color: grey;
+}
+
+.clock {
+	border-radius: 50%;  
+	background: #fff url(clock2.svg) no-repeat center;
+	-webkit-box-shadow: 0 20px 2px;
+	-moz-box-shadow: 0 0 20px 2px;
+	box-shadow: 0 0 20px 2px;
+	background-size: 88%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40vw;
+	height: 40vw;
+	position: relative;
+}
+
+#minute-container, #hour-container, #second-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.dot{
+	background: #000;	
+	position: absolute;
+	top: 47.2%;
+	left: 46%;
+	width: 7%;
+	height: 7%;
+	border-radius: 50%;
+}
+
+.dig{
+	position: absolute;
+	border-radius: 4%;
+	box-shadow: 0 0 1px 1px;
+	top: 55.2%;
+	left: 41%;
+	font-size: 1.5vw;
+	padding: 1%;
+	border: 1px solid;
+}
+
+.hourhand{
+  background: #000;
+  height: 20%;
+  left: 48.8%;
+  position: absolute;
+  top: 30%;
+  transform-origin: 50% 100%;
+  width: 2.5%;
+}
+.minutehand{
+  background: #000;
+  height: 43%;
+  left: 49.5%;
+  position: absolute;
+  top: 8%;
+  transform-origin: 50% 100%;
+  z-index: 10;
+  width: 1.5%;
+}
+.secondhand{
+  background: red;
+  height: 50%;
+  left: 49.8%;
+  position: absolute;
+  top: 15%;
+  z-index: 1000;
+  transform-origin: 50% 100%;
+  width: 0.8%;
+}
+
+/*@keyframes rotate {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}*/
+
+#minute-container{
+	/*animation: rotate 60s infinite linear;	*/
+}
+
+#hour-container{
+	/*animation: rotate 60s infinite linear;	*/
+}
+
+#second-container {
+	 /*transform: rotateZ(60deg);*/
+  /*animation: rotate 60s infinite linear;*/
+}

@@ -1,0 +1,29 @@
+.navigation{
+	text-decoration: none;
+	display: inline-block;
+}
+.center-img{
+	margin-left: auto;
+	margin-right: auto;
+}
+.navig{
+     	padding-left: 24%;
+}
+.navig button{
+	margin-left: 6%;
+}
+@media only screen and (max-width: 1000px) {
+    .navig {
+     	padding-left: 22%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .navig {
+     	padding-left: 10%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .navig {
+     	padding-left: 2%;
+    }
+}
